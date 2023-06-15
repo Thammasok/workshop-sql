@@ -1,0 +1,43 @@
+version: '3.9'
+
+services:
+  webserver:
+    image: nginx:alpine
+    container_name: webserver
+    tty: true
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - ./dockers/nginx/logs:/etc/nginx/logs
+      - ./dockers/nginx/nginx.conf:/etc/nginx/nginx.conf
+    depends_on:
+      - mariadb
+    networks:
+      - our-network
+    restart: always
+  mariadb:
+    image: mariadb:latest
+    container_name: mariadb
+    restart: always
+    ports:
+      - 3306:3306
+    volumes:
+      - ./dockers/mariadb:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    container_name: phpmyadmin
+    ports:
+      - 8000:80
+    environment:
+      - PMA_ARBITRARY=1
+      - PMA_HOST=mariadb
+    depends_on:
+      - mariadb
+volumes:
+  dockers:
+networks:
+  our-network:
+    external: true

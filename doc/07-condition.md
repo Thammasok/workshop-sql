@@ -1,5 +1,7 @@
 # Conditions
 
+Ref: <https://saixiii.com/database-sql-operator/>
+
 Table of Contents
 
 - [Conditions](#conditions)
@@ -135,8 +137,6 @@ WHERE category_id IN (1,3,6);
 ## ANY
 
 The ANY keyword is a SQL operator that returns the Boolean value TRUE if the comparison is TRUE for ANY of the subquery condition.
-
-Ref: <https://saixiii.com/database-sql-operator/>
 
 The following is the syntax that illustrates the use of ANY operator in SQL:
 

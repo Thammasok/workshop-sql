@@ -116,3 +116,5 @@ RIGHT JOIN editors ON books.editor_id = editors.id;
 ```
 
 ---
+
+Ref: <https://learnsql.com/blog/sql-join-examples-with-explanations/>

@@ -34,6 +34,7 @@ services:
     environment:
       - PMA_ARBITRARY=1
       - PMA_HOST=mariadb
+      - UPLOAD_LIMIT=40M
     depends_on:
       - mariadb
 volumes:

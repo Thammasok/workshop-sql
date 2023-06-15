@@ -4,14 +4,11 @@ MySQL tutorial provides basic and advanced concepts of MySQL.
 
 ## Course Overview
 
-1. [SQL Commands](#sql-commands)
-2. [Docker & Connect Database](#docker)
-3. [Connect Database](#connect-database)
-4. Querying Data
-5. Data Transformation
-6. Aggregating Data
-7. Combining Tables
-8. User Managements
+- [MySQL Tutorial](#mysql-tutorial)
+  - [Course Overview](#course-overview)
+  - [SQL Commands](#sql-commands)
+  - [Docker](#docker)
+  - [Connect Database](#connect-database)
 
 ---
 

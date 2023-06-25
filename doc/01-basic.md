@@ -6,9 +6,31 @@ MySQL tutorial provides basic and advanced concepts of MySQL.
 
 - [MySQL Tutorial](#mysql-tutorial)
   - [Course Overview](#course-overview)
+  - [Concept](#concept)
   - [SQL Commands](#sql-commands)
   - [Docker](#docker)
   - [Connect Database](#connect-database)
+
+---
+
+## Concept
+
+**RDBMS vs NoSQL**
+Relational Database Management System (RDBMS)
+A relational database is a type of database that organizes data into tables with **rows and columns**. Each table represents an entity, and the rows within the table represent instances or records of that entity. The columns, also known as attributes, define the characteristics or properties of the entity.
+
+NoSQL, which stands for "Not Only SQL," is a type of database management system that provides a non-relational approach to storing and retrieving data. Unlike traditional Relational Database Management Systems (RDBMS), NoSQL databases do not use the structured table-based schema found in RDBMS. Instead, they use flexible data models that can vary from document-oriented, key-value pairs, wide-column stores, or graph databases.
+
+**Database Relationship Types**
+A relational database implements three different types of relationships:
+
+1. One-to-one (1:1)
+
+2. One-to-many (1:N)
+
+3. Many-to-many (N:N)
+
+Ref: <https://saixiii.com/database-sql-operator/>
 
 ---
 

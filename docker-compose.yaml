@@ -17,7 +17,7 @@ services:
       - our-network
     restart: always
   mariadb:
-    image: mariadb:latest
+    image: mariadb:10.9
     container_name: mariadb
     restart: always
     ports:

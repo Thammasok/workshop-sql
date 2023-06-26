@@ -12,7 +12,7 @@ Table of Contents
     - [DROP column in table](#drop-column-in-table)
     - [RENAME column in table](#rename-column-in-table)
     - [RENAME table](#rename-table)
-  - [Rename Table](#rename-table-1)
+  - [AUTO INCREMENT Field](#auto-increment-field)
   - [TRUNCATE Table](#truncate-table)
   - [DROP Table](#drop-table)
   - [Copy/Clone/Duplicate Table](#copycloneduplicate-table)
@@ -241,11 +241,10 @@ RENAME TO employee;
 
 ---
 
-## Rename Table
+## AUTO INCREMENT Field
 
 ```sql
-ALTER TABLE old_table
-RENAME TO new_table;
+ALTER TABLE employee AUTO_INCREMENT=10;
 ```
 
 ---

@@ -1,7 +1,7 @@
-# JOINS
+# Joins
 
 Table of Contents
-- [JOINS](#joins)
+- [Joins](#joins)
   - [Inner JOIN (Simple Join)](#inner-join-simple-join)
   - [Left Outer Join](#left-outer-join)
   - [Right Outer Join](#right-outer-join)

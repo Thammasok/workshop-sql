@@ -98,7 +98,7 @@ DROP SCHEMA [IF EXISTS] database_name;
 
 ## COPY Database
 
-For the demonstration, we will copy the **testdb** database to **testdb_copy** database using the following steps:
+For the demonstration, we will copy the **simple** database to **simple_copy** database using the following steps:
 
 ```sql
 CREATE DATABASE simple_copy;

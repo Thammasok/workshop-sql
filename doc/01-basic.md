@@ -63,7 +63,7 @@ docker network create our-network
 Start docker via CLI
 
 ```bash
-docker-compose up -d
+docker-compose up -d --force-recreate
 ```
 
 **Stop**

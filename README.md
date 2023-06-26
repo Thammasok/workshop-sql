@@ -1,22 +1,19 @@
 # Command
 
-Create Bride
+1. Create Bride
 
 ```bash
-#!/bin/bash
 docker network create our-network
 ```
 
-Start
+2. Start
 
 ```bash
-#!/bin/bash
 docker-compose up -d
 ```
 
-Stop
+3. Stop
 
 ```bash
-#!/bin/bash
 docker-compose down -v
 ```

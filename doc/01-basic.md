@@ -56,7 +56,6 @@ Docker workspace for mysql workshop
 Create a bride before start docker compose.
 
 ```bash
-#!/bin/bash
 docker network create our-network
 ```
 
@@ -64,7 +63,6 @@ docker network create our-network
 Start docker via CLI
 
 ```bash
-#!/bin/bash
 docker-compose up -d
 ```
 
@@ -72,7 +70,6 @@ docker-compose up -d
 Stop docker via CLI
 
 ```bash
-#!/bin/bash
 docker-compose down -v
 ```
 

@@ -9,7 +9,6 @@ Table of Contents
   - [SELECT Database](#select-database)
   - [SHOW Database](#show-database)
   - [DROP Database](#drop-database)
-  - [COPY Database](#copy-database)
 
 ## Create Database
 
@@ -96,10 +95,10 @@ In MySQL, we can also use the below syntax for deleting the database. It is beca
 DROP SCHEMA [IF EXISTS] database_name;
 ```
 
-## COPY Database
+<!-- ## COPY Database
 
 For the demonstration, we will copy the **simple** database to **simple_copy** database using the following steps:
 
 ```sql
 CREATE DATABASE simple_copy;
-```
+``` -->

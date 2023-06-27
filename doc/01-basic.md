@@ -77,7 +77,7 @@ docker-compose down -v
 Stop docker via CLI
 
 ```bash
-docker exec -it mariadb bash
+docker exec -it mysql bash
 ```
 
 ---
@@ -93,5 +93,5 @@ mysql -h 127.0.0.1 -u root -p [DATABASE_NAME]
 example
 
 ```bash
-mysql -h 127.0.0.1 -u root -p ecommerce
+mysql -h 127.0.0.1 -u root -p simple
 ```

@@ -3,6 +3,7 @@
 1. Create Bride
 
 ```bash
+cd workshop-sql
 docker network create our-network
 ```
 

@@ -28,7 +28,7 @@ FROM table_name
 ```
 
 **Example**
-Execute the following query that uses the COUNT(expression) function to calculates the total number of employee name in employee_lg table available in the table:
+Execute the following query that uses the COUNT(expression) function to calculates the total number of employee name in employee_sm table available in the table:
 
 ```sql
 SELECT COUNT(first_name)

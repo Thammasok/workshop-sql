@@ -12,31 +12,45 @@ services:
       - ./dockers/nginx/logs:/etc/nginx/logs
       - ./dockers/nginx/nginx.conf:/etc/nginx/nginx.conf
     depends_on:
-      - mariadb
+      - mysql
     networks:
       - our-network
     restart: always
-  mariadb:
-    image: mariadb:10.9
-    container_name: mariadb
+  mysql:
+    image: mysql:latest
+    container_name: mysql
     restart: always
     ports:
-      - 3306:3306
+      - "3306:3306"
     volumes:
-      - ./dockers/mariadb:/var/lib/mysql
+      - ./dockers/mysql:/var/lib/mysql
     environment:
-      MYSQL_ROOT_PASSWORD: root
+      # MYSQL_USER: "user"
+      MYSQL_PASSWORD: "root"
+      MYSQL_ROOT_PASSWORD: "root"
+  # db:
+  #   image: mariadb:10.9
+  #   container_name: mariadb
+  #   restart: always
+  #   ports:
+  #     - 3306:3306
+  #   volumes:
+  #     - ./dockers/mariadb:/var/lib/mysql
+  #   environment:
+  #     MYSQL_ROOT_PASSWORD: root
   phpmyadmin:
     image: phpmyadmin/phpmyadmin:latest
     container_name: phpmyadmin
     ports:
       - 8000:80
     environment:
-      - PMA_ARBITRARY=1
-      - PMA_HOST=mariadb
-      - UPLOAD_LIMIT=40M
+      PMA_HOST: mysql
+      PMA_PORT: 3306
+      # - PMA_ARBITRARY=1
+      # - PMA_HOST=mariadb
+      # - UPLOAD_LIMIT=40M
     depends_on:
-      - mariadb
+      - mysql
 volumes:
   dockers:
 networks:

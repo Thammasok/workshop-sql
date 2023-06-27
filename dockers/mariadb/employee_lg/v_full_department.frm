@@ -1,16 +1,0 @@
-TYPE=VIEW
-query=select `employee_lg`.`department`.`dept_no` AS `dept_no`,`employee_lg`.`department`.`dept_name` AS `dept_name`,`current_manager`(`employee_lg`.`department`.`dept_no`) AS `manager` from `employee_lg`.`department`
-md5=2867557fdb4d53504556670345b9fb57
-updatable=1
-algorithm=0
-definer_user=root
-definer_host=%
-suid=2
-with_check_option=0
-timestamp=0001686802805126444
-create-version=2
-source=SELECT\n    dept_no, dept_name, current_manager(dept_no) as manager\nFROM\n    department
-client_cs_name=utf8mb4
-connection_cl_name=utf8mb4_unicode_ci
-view_body_utf8=select `employee_lg`.`department`.`dept_no` AS `dept_no`,`employee_lg`.`department`.`dept_name` AS `dept_name`,`current_manager`(`employee_lg`.`department`.`dept_no`) AS `manager` from `employee_lg`.`department`
-mariadb-version=101103

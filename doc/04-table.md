@@ -122,7 +122,7 @@ The ALTER statement is always used with "ADD", "DROP" and "MODIFY" commands acco
 ```sql
 ALTER TABLE table_name  
 ADD new_column_name column_definition  
-[ FIRST | AFTER column_name ];
+[ AFTER column_name ];
 ```
 
 **Parameters**
@@ -131,7 +131,7 @@ ADD new_column_name column_definition
 | table_name | It specifies the name of the table that you want to modify. |
 | new_column_name | It specifies the name of the new column that you want to add to the table. |
 | column_definition | It specifies the data type and definition of the column (NULL or NOT NULL, etc). |
-| FIRST | AFTER column_name: | It is optional. It tells MySQL where in the table to create the column. If this parameter is not specified, the new column will be added to the end of the table. |
+| AFTER column_name: | It is optional. It tells MySQL where in the table to create the column. If this parameter is not specified, the new column will be added to the end of the table. |
 
 Example:
 
@@ -148,11 +148,9 @@ ADD age varchar(40) NOT NULL;
 
 ```sql
 ALTER TABLE table_name
-  ADD new_column_name column_definition
-  [ FIRST | AFTER column_name ],
-  ADD new_column_name column_definition
-  [ FIRST | AFTER column_name ],
-  ...
+  ADD new_column_name column_definition,
+  ADD new_column_name column_definition,
+  [ AFTER column_name ],
 ;
 ```
 
@@ -160,11 +158,10 @@ Example
 
 ```sql
 ALTER TABLE employee_list
-ADD address varchar(100) NOT NULL
-AFTER name,
+ADD address varchar(100) NOT NULL,
 ADD salary decimal(6,2) NOT NULL,
-ADD birth_date DATE NULL
-AFTER age;
+ADD birth_date DATE NULL,
+AFTER name,
 ```
 
 ### MODIFY column in the table
@@ -172,7 +169,7 @@ AFTER age;
 ```sql
 ALTER TABLE table_name  
 MODIFY column_name column_definition  
-[ FIRST | AFTER column_name ];
+[ AFTER column_name ];
 ```
 
 Example:
@@ -208,7 +205,7 @@ DROP COLUMN age;
 ALTER TABLE table_name
 CHANGE COLUMN old_name new_name
 column_definition
-[ FIRST | AFTER column_name ]
+[ AFTER column_name ]
 ```
 
 Example:

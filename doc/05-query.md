@@ -40,7 +40,7 @@ INSERT INTO table_name VALUES
 First, create a table "People" in the database using the following command:
 
 ```sql
-CREATE TABLE People(
+CREATE TABLE people(
     id int NOT NULL AUTO_INCREMENT,
     name varchar(45) NOT NULL,
     occupation varchar(35) NOT NULL,
@@ -52,14 +52,14 @@ CREATE TABLE People(
 1. If we want to store single records for all fields, use the syntax as follows:
 
 ```sql
-INSERT INTO People (id, name, occupation, age)
+INSERT INTO people (id, name, occupation, age)
 VALUES (101, 'Peter', 'Engineer', 32);
 ```
 
 2. If we want to store multiple records, use the following statements where we can either specify all field names or don't specify any field.
 
 ```sql
-INSERT INTO People VALUES
+INSERT INTO people VALUES
 (102, 'Joseph', 'Developer', 30),
 (103, 'Mike', 'Leader', 28),
 (104, 'Stephen', 'Scientist', 45);
@@ -68,7 +68,7 @@ INSERT INTO People VALUES
 3. If we want to store records without giving all fields, we use the following partial field statements. In such case, it is mandatory to specify field names.
 
 ```sql
-INSERT INTO People (name, occupation) VALUES
+INSERT INTO people (name, occupation) VALUES
 ('Stephen', 'Scientist'),
 ('Bob', 'Actor');
 ```
@@ -94,28 +94,36 @@ SET column_name1=new-value1,
 **Update Single Column**
 This query will update the email id of Java course with the new id as follows:
 
+first create email column
+
 ```sql
-UPDATE trainer
-SET email = 'mike@scrum123.com'
-WHERE course_name = 'Java';
+ALTER TABLE people
+ADD email VARCHAR(45) NULL DEFAULT NULL
+AFTER age;
+```
+
+```sql
+UPDATE people
+SET email = 'joseph@scrum123.com'
+WHERE name = 'Joseph';
 ```
 
 **Update Multiple Columns**
 The UPDATE statement can also be used to update multiple columns by specifying a comma-separated list of columns. Suppose we have a table as below:
 
 ```sql
-UPDATE trainer
-SET course_name = 'Project Manager', email = 'noon@scrum123.com'
-WHERE id = 5;
+UPDATE people
+SET name = 'Nut', email = 'nut@gmail.com'
+WHERE id = 105;
 ```
 
 **UPDATE Statement to Replace String**
 We can also use the UPDATE statement in SQL to change the string name in the particular column. The following example updates the domain parts of emails of Android course:
 
 ```sql
-UPDATE trainer
-SET email = REPLACE(email,'@sck.com','@scrum123.com')
-WHERE course_name = 'Testing';
+UPDATE people
+SET email = REPLACE(email,'@gmail.com','@scrum123.com')
+WHERE name = 'Nut';
 ```
 
 ---
@@ -132,10 +140,8 @@ DELETE FROM table_name WHERE condition;
 if we want to delete an trainer whose id is 5, we should use the DELETE statement with the WHERE clause. See the below query:
 
 ```sql
-DELETE FROM trainer WHERE id=5;
+DELETE FROM people WHERE id=101;
 ```
-
-เอาแค่นี้พอ LoL
 
 **DELETE and LIMIT Clause**
 Limit clause is used to restrict the count of rows returns from the result set, rather than fetching the whole records in the table. Sometimes we want to limit the number of rows to be deleted from the table; in that case, we will use the LIMIT clause as follows:

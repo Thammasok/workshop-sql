@@ -4,7 +4,7 @@ Table of Contents
 
 - [Functions](#functions)
   - [COUNT()](#count)
-  - [SUMum()](#sumum)
+  - [SUM()](#sum)
   - [AVG()](#avg)
   - [MIN()](#min)
   - [MAX()](#max)
@@ -54,7 +54,7 @@ FROM employee;
 
 ---
 
-## SUMum()
+## SUM()
 
 sum() function is used to return the total summed value of an expression. It returns NULL if the result set does not have any rows. It is one of the kinds of aggregate functions in MySQL.
 

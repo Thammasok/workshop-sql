@@ -20,7 +20,6 @@ The following commands are used to control transactions.
 **COMMIT** − to save the changes.
 **ROLLBACK** − to roll back the changes.
 **SAVEPOINT** − creates points within the groups of transactions in which to ROLLBACK.
-**SET TRANSACTION** − Places a name on a transaction.
 
 ---
 

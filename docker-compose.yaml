@@ -33,16 +33,6 @@ services:
       # MYSQL_USER: user
       MYSQL_PASSWORD: root
       MYSQL_ROOT_PASSWORD: root
-  # db:
-  #   image: mariadb:10.9
-  #   container_name: mariadb
-  #   restart: always
-  #   ports:
-  #     - 3306:3306
-  #   volumes:
-  #     - ./dockers/mariadb:/var/lib/mysql
-  #   environment:
-  #     MYSQL_ROOT_PASSWORD: root
   phpmyadmin:
     image: phpmyadmin/phpmyadmin:latest
     container_name: phpmyadmin

@@ -20,14 +20,19 @@ services:
     image: mysql:latest
     container_name: mysql
     restart: always
+    command: --default-authentication-plugin=mysql_native_password
     ports:
       - "3306:3306"
     volumes:
+        # Add docker-entrypoint-initdb.d
+      # - ./dockers/init:/docker-entrypoint-initdb.d
       - ./dockers/mysql:/var/lib/mysql
     environment:
-      # MYSQL_USER: "user"
-      MYSQL_PASSWORD: "root"
-      MYSQL_ROOT_PASSWORD: "root"
+      # Add database
+      # MYSQL_DATABASE: simple
+      # MYSQL_USER: user
+      MYSQL_PASSWORD: root
+      MYSQL_ROOT_PASSWORD: root
   # db:
   #   image: mariadb:10.9
   #   container_name: mariadb
